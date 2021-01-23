@@ -1,6 +1,6 @@
 # ✨♻️ JavaScript Visualized: Event Loop
 
-Oh boi the event loop. It’s one of those things that every JavaScript developer has to deal with in one way or another, but it can be a bit confusing to understand at first. I’m a visual learner so I thought I’d try to help you by explaining it in a visual way through low-res gifs because it's 2019 and gifs are somehow still pixelated and blurry.
+Oh boi the event loop. It’s one of those things that every JavaScript developer has to deal with in one way or another, but it can be a bit confusing to understand at first. I’m a visual learner so I thought I’d try to help you by explaining it in a visual way through low-res gifs because it's 2021 and gifs are somehow still pixelated and blurry.
 
 But first, what is the event loop and why should you care?
 
