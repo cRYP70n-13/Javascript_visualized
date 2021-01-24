@@ -10,12 +10,12 @@ However, it's definitely good to know the basics of the JavaScript engine and se
 
 The HTML parser encounters a `script` tag with a source. Code from this source get loaded from either the `Network`, `cache`, or an installed `service worker`. The response is the requested script as a `STREAM OF BYTES` which the byte stream decoder takes care of! The `**Byte Stream decoder**` decodes the stream of bytes as it's being downloaded.
 
--> TODO: Insert an image to explain it very well
+![JS_enigne GIF](./Images/Engine_1.gif)
 
 The byte stream decoder creates `*tokens*` from the decoder stream of bytes. For example, `0066` decodes to `f`, `0075` decodes to `u`, `006e` to `n`, `0063` to `c`, `0074` to `t`, `0069` to `i`, `006f` to `o`, and `006e` to `n` followed by a whitespace. Seems like you wrote `function`! this is a reserved keyword in JS, a token gets created, and sent to the parser (and pre-parser, which I didn't cover in teh gifs But I think I will explain it later).
 The same happens for the rest of teh byte stream.
 
--> TODO: Insert the decoder images to clean it up more
+![JS_engine explained](./Images/Engine_2.gif)
 
 ---
 
@@ -23,13 +23,13 @@ The engine uses two parsers: the *pre-parser*, and the *parser*.  In order to re
 
 The parser creates nodes based on the tokens it recives from the byte stream decoder. With thses nodes, it creates an Abstract Syntax Tree, or AST (If u wanna build a compiler or a shell u have to implement this AST 🌴).
 
--> TODO: Gif Here to explain it more
+![JS_engine explained deeper](Images/Engine_3.gif)
 
 ---
 
 Next, it's time for the *interpreter*! The interpreter which walks through the AST, and generates *Byte Code* based on the information that the AST contains. Once the byte code has been generated fully, thet AST got deleted, Clearing up memory space. Finally, we have something that a machine can work with! 🎉✅
 
--> TODO: Image here also
+![better](Images/Engine_4.gif)
 
 ---
 
@@ -37,7 +37,7 @@ Although byte code is fast, it can be faster. As this bytecode runs, information
 
 The byte code, together with the generated type feedback, is sent to an *Optimizing Compiler*. The optimizing compiler takes the byte code and type feedback, and generates highly optimized machine code from these 🚀.
 
-TODO: -> An Image please
+![better](Images/Engine_5.gif)
 
 ---
 
